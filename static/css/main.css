@@ -14,11 +14,15 @@
     background-color: var(--h-title-color);
 }
 
-/* Name block above photo */
-.name-block {
-    padding-top: 6rem;
-    padding-bottom: 1rem;
-    text-align: center;
+/* Name + Photo same row, aligned; moved down a bit */
+.intro-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 7rem;
+    padding-bottom: 2.5rem;
+    min-height: 0;
 }
 
 .name-title {
@@ -27,24 +31,29 @@
     font-size: 2.2rem;
     font-weight: 600;
     margin: 0;
-}
-
-/* Photo block - no overlap, normal flow */
-.avatar-block {
-    padding-bottom: 2rem;
-    text-align: center;
+    flex-shrink: 0;
 }
 
 #avatar {
-    position: relative;
-    display: inline-block;
-    margin: 0 auto;
-    z-index: 1;
+    flex-shrink: 0;
+    line-height: 0;
 }
 
 #avatar img {
-    height: max(130px, min(200px, calc(100vw/6)));
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 220px;
+    max-width: 180px;
+    object-fit: contain;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 576px) {
+    .intro-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 section header h2{
@@ -96,7 +105,8 @@ section .main-body{
 
 .home-content {
     clear: both;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
+    margin-top: 0;
 }
 
 

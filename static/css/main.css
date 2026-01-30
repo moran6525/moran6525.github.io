@@ -41,21 +41,6 @@
     margin: 0 0 0.25rem 0;
 }
 
-.github-handle {
-    margin: 0 0 1rem 0;
-    font-size: 1.3rem;
-    font-weight: 200;
-}
-
-.github-handle a {
-    color: var(--h-title-color);
-    text-decoration: none;
-}
-
-.github-handle a:hover {
-    text-decoration: underline;
-}
-
 /* 正文与 section .main-body 完全一致 */
 .intro-left .main-body {
     font-size: 1.3rem;

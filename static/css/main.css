@@ -14,11 +14,11 @@
     background-color: var(--h-title-color);
 }
 
-/* Left: Name (previous size) + moran6525 + Bio; Right: Photo, aligned */
+/* Left: Name + moran6525 + Bio; Right: Photo，同一行不换行 */
 .intro-block {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     gap: 2rem;
     padding-top: 7rem;
@@ -27,22 +27,24 @@
 }
 
 .intro-left {
-    flex: 1;
+    flex: 1 1 auto;
     min-width: 0;
 }
 
-/* Name: Changlan Liu | 刘长岚, previous size */
+/* 姓名：与原来 section header h2 一致，不单独改字体 */
 .name-title {
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
     color: var(--h-title-color);
-    font-size: 2.2rem;
-    font-weight: 600;
+    font-size: 2.3rem;
+    line-height: 4rem;
+    font-weight: 400;
     margin: 0 0 0.25rem 0;
 }
 
 .github-handle {
     margin: 0 0 1rem 0;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-weight: 200;
 }
 
 .github-handle a {
@@ -54,7 +56,7 @@
     text-decoration: underline;
 }
 
-/* Intro left .main-body: same as section .main-body */
+/* 正文与 section .main-body 完全一致 */
 .intro-left .main-body {
     font-size: 1.3rem;
     font-weight: 200;
@@ -62,7 +64,7 @@
 }
 
 #avatar {
-    flex-shrink: 0;
+    flex: 0 0 auto;
     line-height: 0;
 }
 
@@ -78,7 +80,7 @@
 
 @media screen and (max-width: 768px) {
     .intro-block {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 

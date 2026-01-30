@@ -14,24 +14,51 @@
     background-color: var(--h-title-color);
 }
 
-/* Name + Photo same row, aligned; moved down a bit */
+/* Left: Name (previous size) + moran6525 + Bio; Right: Photo, aligned */
 .intro-block {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
     padding-top: 7rem;
     padding-bottom: 2.5rem;
-    min-height: 0;
+    background: linear-gradient(45deg, #fcfcfc, #ffffff);
 }
 
+.intro-left {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Name: Changlan Liu | 刘长岚, previous size */
 .name-title {
     font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     color: var(--h-title-color);
     font-size: 2.2rem;
     font-weight: 600;
-    margin: 0;
-    flex-shrink: 0;
+    margin: 0 0 0.25rem 0;
+}
+
+.github-handle {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.github-handle a {
+    color: var(--h-title-color);
+    text-decoration: none;
+}
+
+.github-handle a:hover {
+    text-decoration: underline;
+}
+
+/* Intro left .main-body: same as section .main-body */
+.intro-left .main-body {
+    font-size: 1.3rem;
+    font-weight: 200;
+    line-height: 2.4rem;
 }
 
 #avatar {
@@ -49,10 +76,9 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .intro-block {
         flex-direction: column;
-        align-items: flex-start;
     }
 }
 

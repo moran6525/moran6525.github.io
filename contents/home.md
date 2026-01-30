@@ -1,5 +1,3 @@
-[![moran6525](https://img.shields.io/badge/moran6525-github-blue?logo=github)](https://github.com/moran6525)
-
 He has been admitted to the joint PhD program between Zhejiang University and Beijing Zhongguancun College and is honored to be advised by Prof. Yanjiao Chen, Prof. Jian Zhao, and Assoc. Prof. Saihui Hou.
 
 #### Contact
